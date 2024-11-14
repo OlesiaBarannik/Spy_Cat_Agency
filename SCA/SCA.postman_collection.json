@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "cdb99c73-c4bc-448c-a005-1e19d931ea44",
+		"name": "SCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32252476"
+	},
+	"item": [
+		{
+			"name": "list_cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/cats/"
+			},
+			"response": []
+		},
+		{
+			"name": "cat_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/cats/2"
+			},
+			"response": []
+		},
+		{
+			"name": "create_cats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Whiskers1\",\r\n    \"years_of_experience\": 5,\r\n    \"breed\": \"siamese\",\r\n    \"salary\": \"2500.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/cats/"
+			},
+			"response": []
+		},
+		{
+			"name": "create_mission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cat\": 4,\r\n    \"complete\": true,\r\n    \"targets\": [\r\n        {\r\n            \"name\": \"target1\",\r\n            \"country\": \"UA\",\r\n            \"notes\": \"test note 1\",\r\n            \"complete\": false\r\n        },\r\n        {\r\n            \"name\": \"target2\",\r\n            \"country\": \"GB\",\r\n            \"notes\": \"test note 2\",\r\n            \"complete\": false\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/missions/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_mission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Whiskers1\",\r\n    \"years_of_experience\": 5,\r\n    \"breed\": \"siamese\",\r\n    \"salary\": \"2500.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/missions/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_mission_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Whiskers1\",\r\n    \"years_of_experience\": 5,\r\n    \"breed\": \"siamese\",\r\n    \"salary\": \"2500.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/missions/12"
+			},
+			"response": []
+		},
+		{
+			"name": "update_mission",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 13,\r\n    \"cat\": 4,\r\n    \"complete\": true,\r\n    \"targets\": [\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"target6\",\r\n            \"country\": \"UA\",\r\n            \"notes\": \"test note 6\",\r\n            \"complete\": false,\r\n            \"mission\": 13\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"target7\",\r\n            \"country\": \"GB\",\r\n            \"notes\": \"test note 7\",\r\n            \"complete\": false,\r\n            \"mission\": 13\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/missions/12"
+			},
+			"response": []
+		},
+		{
+			"name": "update_cat",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Whiskers1\",\r\n    \"years_of_experience\": 10,\r\n    \"breed\": \"siamese\",\r\n    \"salary\": \"2500.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/cats/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_missions_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/missions/13/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_cat_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Whiskers1\",\r\n    \"years_of_experience\": 10,\r\n    \"breed\": \"siamese\",\r\n    \"salary\": \"2500.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/cats/3/"
+			},
+			"response": []
+		}
+	]
+}
